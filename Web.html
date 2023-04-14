@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Recommendation</title>
+  <link rel="stylesheet" href= "{{url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body bgcolor="pink">
+ <div class="topnav">
+  <a class="active" href="index.html">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+   <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="Search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div> 
+
+<h1>RECOMMENDED PRODUCTS:</h1>
+
+<h1 class="recommend">Recommendations for {{ item_name }}</h1>
+<ul>
+  {% for recommendation in recommendations %}
+  <li>{{ recommendation }}</li>
+  {% endfor %}
+<br><br><br><br><br>
+<div class="icon">
+  <!-- Add font awesome icons -->
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-instagram"></a>
+</div>
+
+</body>
+</html>
